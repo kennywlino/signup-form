@@ -7,50 +7,62 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-.left-side {
+.side-banner {
     flex: 1;
-    flex-grow: 1;
-}
-
-.left-side img {
     height: 100vh;
+    background-image: url("./img/desserts_lucas-andrade-unsplash.jpeg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.banner-caption {
+.side-banner h1, .banner-caption {
     position: relative;
-    height: 2em;
     width: 100%;
-    background: red;
-    opacity: 0.7;
+    background: rgba(255, 0, 0, 0.6);
     color: white;
-    bottom: 5vh;
-    font-size: 1.3em;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.side-banner h1 {
+    height: 2.5em;
+    font-size: 2em;
+    top: 20vh;
+}
 
+.banner-caption {
+    height: 2em;
+    font-size: 1em;
+}
 
 .right-side {
     flex: 2;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
 }
 
 .hero, .signup, .login {
+    flex: 1;
     padding: 50px;
 }
 
-.hero {
+.hero p, .signup p{
     font-size: 2em;
+}
+
+.hero p {
+    margin-bottom: 1em;
 }
 
 .signup {
     align-self: stretch;
     background: rgba(255, 0, 0, 0.5);
+    box-shadow: 10px 5px 5px red;
 }
 
 .signup .forms {
@@ -60,10 +72,37 @@ body {
 
 .signup .forms div {
     flex: calc(100% / 2);
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+input {
+    box-sizing: border-box;
+    width : 55%;
+    padding: 5px 10px;
+    margin: 0;
+    border-radius: 20px;
+}
+
+input:focus {
+    background: rgba(0, 215, 255, 0.7);
 }
 
 button {
-    padding: 5px;
-    font: bold .6em sans-serif;
+    box-sizing: border-box;
+    width: 200px;
+    height: 40px;
+    padding: 5px 10px;
+    font: bold 1em sans-serif;
     border-radius: 5px;
 }
