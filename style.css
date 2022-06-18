@@ -1,14 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fresca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
 }
 body {
     display: flex;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: 'Fresca', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .side-banner {
-    flex: 1;
+    flex: 2;
     height: 100vh;
     background-image: url("./img/desserts_lucas-andrade-unsplash.jpeg");
     background-position: center;
@@ -18,8 +22,7 @@ body {
     justify-content: space-between;
 }
 
-.side-banner h1, .banner-caption {
-    position: relative;
+.banner-heading, .banner-caption {
     width: 100%;
     background: rgba(255, 0, 0, 0.6);
     color: white;
@@ -28,19 +31,26 @@ body {
     align-items: center;
 }
 
-.side-banner h1 {
-    height: 2.5em;
-    font-size: 2em;
-    top: 20vh;
+.banner-heading {
+    position: relative;
+    height: 4em;
+    font-size: 2.5em;
+    top: 13vh;
+    font-family: 'Staatliches', sans-serif;
+}
+
+.strawberry {
+    height: 8vh;
 }
 
 .banner-caption {
-    height: 2em;
-    font-size: 1em;
+    height: 3.5em;
+    font-size: 1.3em;
 }
 
 .right-side {
-    flex: 2;
+    flex: 5;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -48,11 +58,18 @@ body {
 
 .hero, .signup, .login {
     flex: 1;
-    padding: 50px;
+}
+
+.signup {
+    padding: 50px; 
+}
+
+.hero, .login {
+    padding: 75px;
 }
 
 .hero p, .signup p{
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .hero p {
@@ -63,6 +80,10 @@ body {
     align-self: stretch;
     background: rgba(255, 0, 0, 0.5);
     box-shadow: 10px 5px 5px red;
+}
+
+h2 {
+    font-size: 2.2em;
 }
 
 .signup .forms {
@@ -83,10 +104,22 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 10px;
+    gap: 20px;
+}
+
+.login p {
+    font-size: 1.5rem;
+}
+
+label, button {
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 input {
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-size: 1.2rem;
     box-sizing: border-box;
     width : 55%;
     padding: 5px 10px;
@@ -96,13 +129,19 @@ input {
 
 input:focus {
     background: rgba(0, 215, 255, 0.7);
+    box-shadow: 10px 5px 5px rgba(145, 30, 30, 0.8);
+}
+
+input + span {
+    position: relative;
 }
 
 button {
     box-sizing: border-box;
-    width: 200px;
-    height: 40px;
+    background: rgba(0, 215, 255, 1);
+    color: white;
+    width: 250px;
+    height: 50px;
     padding: 5px 10px;
-    font: bold 1em sans-serif;
     border-radius: 5px;
 }
